@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3vvxsjfk6fqa"
-path="res://.godot/imported/Run.png-1ab6cf96b43d5671918717fa360437f3.ctex"
+uid="uid://c2x3euuenthgv"
+path="res://.godot/imported/spikes.png-b351f09f578e68883c2effc60596a8c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/Main/Run.png"
-dest_files=["res://.godot/imported/Run.png-1ab6cf96b43d5671918717fa360437f3.ctex"]
+source_file="res://Assets/Traps/spikes.png"
+dest_files=["res://.godot/imported/spikes.png-b351f09f578e68883c2effc60596a8c5.ctex"]
 
 [params]
 
