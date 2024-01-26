@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxiu1b47p03i1"
-path="res://.godot/imported/Idle.png-1b97afc60dd29f86a66e1e8a85ad2da5.ctex"
+uid="uid://gc5s2ck1yesn"
+path="res://.godot/imported/Idle.png-177427fece5288484afe373d1858a312.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game-Jam-2024/Assets/Characters/Main/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-1b97afc60dd29f86a66e1e8a85ad2da5.ctex"]
+source_file="res://Assets/Characters/Main/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-177427fece5288484afe373d1858a312.ctex"]
 
 [params]
 
