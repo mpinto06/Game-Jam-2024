@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://udwgo6dsj2u3"]
+[gd_scene load_steps=14 format=3 uid="uid://udwgo6dsj2u3"]
 
 [ext_resource type="Texture2D" uid="uid://cyrtaup47ppsc" path="res://Assets/Characters/Main/Idle.png" id="1_hkrrf"]
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_lwcwc"]
+[ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="3_08jta"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2pdh"]
 atlas = ExtResource("1_hkrrf")
@@ -88,3 +89,6 @@ scale = Vector2(1, 0.980392)
 shape = SubResource("CapsuleShape2D_gckhd")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+script = ExtResource("3_08jta")
