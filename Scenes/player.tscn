@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://udwgo6dsj2u3"]
+[gd_scene load_steps=21 format=3 uid="uid://udwgo6dsj2u3"]
 
 [ext_resource type="Texture2D" uid="uid://cyrtaup47ppsc" path="res://Assets/Characters/Main/Idle.png" id="1_hkrrf"]
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_lwcwc"]
 [ext_resource type="Texture2D" uid="uid://c7eayro41t07s" path="res://Assets/Characters/Main/Jump.png" id="3_0gpvi"]
 [ext_resource type="Texture2D" uid="uid://igufqg40e1kg" path="res://Assets/Characters/Main/Run.png" id="4_11jgp"]
+[ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="5_hbqxl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2pdh"]
 atlas = ExtResource("1_hkrrf")
@@ -129,10 +130,15 @@ animation = &"Run"
 autoplay = "Idle"
 frame_progress = 0.174566
 
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
+position = Vector2(0, -1.58946e-07)
+scale = Vector2(0.333333, 0.333333)
+drag_vertical_enabled = true
+drag_top_margin = 1.0
+drag_bottom_margin = 1.0
+script = ExtResource("5_hbqxl")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5.5, 2.5)
 scale = Vector2(1, 0.980392)
 shape = SubResource("RectangleShape2D_1t5ug")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-drag_vertical_enabled = true

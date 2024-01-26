@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://sh841afo4sp6"]
+
+[ext_resource type="PackedScene" uid="uid://chvjb1hwtegvc" path="res://Scenes/nivel_3.tscn" id="1_k2onk"]
+
+[node name="ZonaAnimacion" type="Node2D"]
+
+[node name="Nivel3" parent="." instance=ExtResource("1_k2onk")]
