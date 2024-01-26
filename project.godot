@@ -14,3 +14,7 @@ config/name="Game-Jam-2024"
 run/main_scene="res://Scenes/nivel_1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[physics]
+
+2d/default_gravity=2500.0
