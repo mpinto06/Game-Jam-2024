@@ -86,3 +86,5 @@ frame_progress = 0.764606
 position = Vector2(0, 4)
 scale = Vector2(1, 0.980392)
 shape = SubResource("CapsuleShape2D_gckhd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
