@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://udwgo6dsj2u3"]
+[gd_scene load_steps=9 format=3 uid="uid://udwgo6dsj2u3"]
 
 [ext_resource type="Texture2D" uid="uid://gc5s2ck1yesn" path="res://Assets/Characters/Main/Idle.png" id="1_hkrrf"]
+[ext_resource type="Script" path="res://Scenes/player.gd" id="1_lwcwc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b0rsk"]
 atlas = ExtResource("1_hkrrf")
@@ -35,14 +36,25 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 4.0
+"speed": 6.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gckhd"]
+radius = 35.0
+height = 102.0
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_lwcwc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(197, 367)
+position = Vector2(0, 4.76837e-07)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_3avow")
+autoplay = "default"
 frame_progress = 0.243326
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+scale = Vector2(1, 0.980392)
+shape = SubResource("CapsuleShape2D_gckhd")
