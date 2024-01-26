@@ -219,10 +219,14 @@ animation = &"Run"
 autoplay = "Idle"
 frame_progress = 0.293275
 
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
+position = Vector2(0, -1.58946e-07)
+scale = Vector2(0.333333, 0.333333)
+drag_vertical_enabled = true
+drag_top_margin = 0.7
+drag_bottom_margin = 0.7
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5.5, 2.5)
 scale = Vector2(1, 0.980392)
 shape = SubResource("RectangleShape2D_1t5ug")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-drag_vertical_enabled = true
