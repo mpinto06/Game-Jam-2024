@@ -99,3 +99,7 @@ autoplay = "Idle"
 position = Vector2(0, 4)
 scale = Vector2(1, 0.980392)
 shape = SubResource("CapsuleShape2D_gckhd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
