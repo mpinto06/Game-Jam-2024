@@ -10,6 +10,6 @@ config_version=5
 
 [application]
 
-config/name="Game-Jam-2024"
+config/name="Game-jam-2024"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
