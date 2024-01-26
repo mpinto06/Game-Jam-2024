@@ -1,8 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://udwgo6dsj2u3"]
+[gd_scene load_steps=18 format=3 uid="uid://udwgo6dsj2u3"]
 
 [ext_resource type="Texture2D" uid="uid://cyrtaup47ppsc" path="res://Assets/Characters/Main/Idle.png" id="1_hkrrf"]
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_lwcwc"]
-[ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="3_08jta"]
+[ext_resource type="Texture2D" uid="uid://c7eayro41t07s" path="res://Assets/Characters/Main/Jump.png" id="3_0gpvi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h2pdh"]
 atlas = ExtResource("1_hkrrf")
@@ -36,6 +36,22 @@ region = Rect2(192, 0, 32, 32)
 atlas = ExtResource("1_hkrrf")
 region = Rect2(224, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_036tn"]
+atlas = ExtResource("3_0gpvi")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2h0t7"]
+atlas = ExtResource("3_0gpvi")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sv6qu"]
+atlas = ExtResource("3_0gpvi")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tp0r1"]
+atlas = ExtResource("3_0gpvi")
+region = Rect2(96, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_3avow"]
 animations = [{
 "frames": [{
@@ -66,13 +82,30 @@ animations = [{
 "loop": true,
 "name": &"Idle",
 "speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_036tn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2h0t7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sv6qu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tp0r1")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gckhd"]
 radius = 35.0
 height = 102.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="MainCharacter" type="CharacterBody2D"]
 script = ExtResource("1_lwcwc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -80,15 +113,10 @@ texture_filter = 1
 position = Vector2(0, 4.76837e-07)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_3avow")
-animation = &"Idle"
-frame_progress = 0.764606
+animation = &"Jump"
+autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
 scale = Vector2(1, 0.980392)
 shape = SubResource("CapsuleShape2D_gckhd")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-script = ExtResource("3_08jta")
