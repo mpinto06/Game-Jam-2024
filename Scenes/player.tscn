@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://udwgo6dsj2u3"]
+[gd_scene load_steps=15 format=3 uid="uid://udwgo6dsj2u3"]
 
 [ext_resource type="Texture2D" uid="uid://cyrtaup47ppsc" path="res://Assets/Characters/Main/Idle.png" id="1_hkrrf"]
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_lwcwc"]
@@ -35,18 +35,6 @@ region = Rect2(192, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ipopg"]
 atlas = ExtResource("1_hkrrf")
 region = Rect2(224, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_036tn"]
-atlas = ExtResource("3_0gpvi")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2h0t7"]
-atlas = ExtResource("3_0gpvi")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sv6qu"]
-atlas = ExtResource("3_0gpvi")
-region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tp0r1"]
 atlas = ExtResource("3_0gpvi")
@@ -85,18 +73,9 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_036tn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2h0t7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sv6qu")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_tp0r1")
 }],
-"loop": false,
+"loop": true,
 "name": &"Jump",
 "speed": 10.0
 }]
@@ -113,7 +92,7 @@ texture_filter = 1
 position = Vector2(0, 4.76837e-07)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_3avow")
-animation = &"Jump"
+animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
