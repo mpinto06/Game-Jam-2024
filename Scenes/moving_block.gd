@@ -8,14 +8,25 @@ var player
 
 var run_away = false
 
+
+@onready var collision_shape_2d = $CollisionShape2D
+
 func _physics_process(delta):
 	if run_away:
-		var direction = (player.position - self.position).normalized()
-		velocity.x = -direction.x * SPEED
+		if self.position.x < 3264:
+			var direction = (player.position - self.position).normalized()
+			velocity.x = -direction.x * SPEED
+		else:
+			collision_shape_2d.disabled = true
+			velocity.x = 0
+			velocity.y = 600
+			if self.position.y > 700:
+				self.queue_free()	
 	else:
 		velocity.x = 0
 		
 	move_and_slide()
+
 
 
 
