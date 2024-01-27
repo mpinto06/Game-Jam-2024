@@ -222,7 +222,8 @@ frame_progress = 0.888096
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
 position = Vector2(-5.66244e-07, 0.188235)
 scale = Vector2(0.333333, 0.333333)
-drag_vertical_enabled = true
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 drag_top_margin = 0.7
 drag_bottom_margin = 0.7
 
