@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvihistgegmt5"]
+[gd_scene load_steps=9 format=3 uid="uid://cvihistgegmt5"]
 
 [ext_resource type="Texture2D" uid="uid://ikw4ujf8ivca" path="res://Assets/Backgrounds/Blue.png" id="1_yta4c"]
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="2_10lax"]
 [ext_resource type="PackedScene" uid="uid://udwgo6dsj2u3" path="res://Scenes/player.tscn" id="3_6xi8w"]
+[ext_resource type="Texture2D" uid="uid://c2x3euuenthgv" path="res://Assets/Traps/spikes.png" id="4_spbv8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2bum4"]
 texture = ExtResource("2_10lax")
@@ -455,6 +456,9 @@ sources/0 = SubResource("TileSetAtlasSource_2bum4")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c2y4c"]
 size = Vector2(96, 22.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5pggy"]
+size = Vector2(45, 20)
+
 [node name="nivel_1" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -462,14 +466,15 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -993.0
-offset_top = -822.0
-offset_right = 8000.0
-offset_bottom = 1421.0
+offset_left = -995.0
+offset_top = -819.0
+offset_right = 7998.0
+offset_bottom = 1424.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_yta4c")
 stretch_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -490,4 +495,43 @@ metadata/_edit_lock_ = true
 position = Vector2(912, 347.25)
 shape = SubResource("RectangleShape2D_c2y4c")
 
-[node name="Spikes" type="Area2D" parent="."]
+[node name="Node" type="Node" parent="."]
+
+[node name="Spike" type="Area2D" parent="Node"]
+position = Vector2(1420, 681)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Spike"]
+position = Vector2(-53.5, 28)
+shape = SubResource("RectangleShape2D_5pggy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Spike"]
+texture_filter = 1
+position = Vector2(-52, 15)
+scale = Vector2(3, 3)
+texture = ExtResource("4_spbv8")
+
+[node name="Spike2" type="Area2D" parent="Node"]
+position = Vector2(1470.04, 681)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Spike2"]
+position = Vector2(-53.5, 28)
+shape = SubResource("RectangleShape2D_5pggy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Spike2"]
+texture_filter = 1
+position = Vector2(-52, 15)
+scale = Vector2(3, 3)
+texture = ExtResource("4_spbv8")
+
+[node name="Spike3" type="Area2D" parent="Node"]
+position = Vector2(1519.04, 681)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Spike3"]
+position = Vector2(-53.5, 28)
+shape = SubResource("RectangleShape2D_5pggy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/Spike3"]
+texture_filter = 1
+position = Vector2(-52, 15)
+scale = Vector2(3, 3)
+texture = ExtResource("4_spbv8")
