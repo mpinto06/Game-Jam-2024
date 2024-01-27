@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7b3n48ktcaod"]
+
+[ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="1_xnj7o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otjuw"]
+size = Vector2(64, 80)
+
+[node name="MovingTile" type="AnimatableBody2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xnj7o")
+region_enabled = true
+region_rect = Rect2(144, 0, 32, 32)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-16, -24)
+texture = ExtResource("1_xnj7o")
+region_enabled = true
+region_rect = Rect2(96, 0, 32, 16)
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(16, -24)
+texture = ExtResource("1_xnj7o")
+region_enabled = true
+region_rect = Rect2(112, 0, 32, 16)
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(-24, -16)
+texture = ExtResource("1_xnj7o")
+region_enabled = true
+region_rect = Rect2(96, 0, 16, 32)
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(-24, 32)
+texture = ExtResource("1_xnj7o")
+region_enabled = true
+region_rect = Rect2(96, 16, 16, 32)
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(24, 32)
+texture = ExtResource("1_xnj7o")
+region_enabled = true
+region_rect = Rect2(128, 16, 16, 32)
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(-8, 40)
+texture = ExtResource("1_xnj7o")
+region_enabled = true
+region_rect = Rect2(112, 32, 16, 16)
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(8, 40)
+texture = ExtResource("1_xnj7o")
+region_enabled = true
+region_rect = Rect2(112, 32, 16, 16)
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(24, -8)
+texture = ExtResource("1_xnj7o")
+region_enabled = true
+region_rect = Rect2(128, 16, 16, 16)
+
+[node name="Sprite2D11" type="Sprite2D" parent="."]
+position = Vector2(24, 8)
+texture = ExtResource("1_xnj7o")
+region_enabled = true
+region_rect = Rect2(128, 16, 16, 16)
+
+[node name="Sprite2D12" type="Sprite2D" parent="."]
+position = Vector2(-24, 8)
+texture = ExtResource("1_xnj7o")
+region_enabled = true
+region_rect = Rect2(96, 16, 16, 16)
+
+[node name="Sprite2D13" type="Sprite2D" parent="."]
+position = Vector2(-8, 24)
+texture = ExtResource("1_xnj7o")
+region_enabled = true
+region_rect = Rect2(112, 16, 16, 16)
+
+[node name="Sprite2D14" type="Sprite2D" parent="."]
+position = Vector2(8, 24)
+texture = ExtResource("1_xnj7o")
+region_enabled = true
+region_rect = Rect2(112, 16, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_otjuw")
