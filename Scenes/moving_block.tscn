@@ -112,3 +112,4 @@ position = Vector2(-57, 8.25)
 shape = SubResource("RectangleShape2D_ffpyt")
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_shape_exited" from="PlayerDetection" to="." method="_on_player_detection_body_shape_exited"]
