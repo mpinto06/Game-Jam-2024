@@ -1,12 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7b3n48ktcaod"]
+[gd_scene load_steps=5 format=3 uid="uid://b7b3n48ktcaod"]
 
+[ext_resource type="Script" path="res://Scenes/moving_tile.gd" id="1_a43ob"]
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="1_xnj7o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_otjuw"]
 size = Vector2(64, 80)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xmv7q"]
+size = Vector2(50, 79.5)
+
 [node name="MovingTile" type="AnimatableBody2D"]
 texture_filter = 1
+script = ExtResource("1_a43ob")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_xnj7o")
@@ -100,3 +105,11 @@ region_rect = Rect2(112, 16, 16, 16)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_otjuw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-57, 8.25)
+shape = SubResource("RectangleShape2D_xmv7q")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
