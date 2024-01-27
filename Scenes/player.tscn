@@ -232,3 +232,7 @@ drag_bottom_margin = 0.7
 position = Vector2(-5.5, 2.5)
 scale = Vector2(1, 0.980392)
 shape = SubResource("RectangleShape2D_1t5ug")
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
+@onready var coyote_timer = $CoyoteTimer
 
 const SPEED = 400
 const JUMP_VELOCITY = -900
@@ -19,7 +20,7 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("ui_accept") and (is_on_floor() or coyote_timer.time_left > 0.0):
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
@@ -34,4 +35,9 @@ func _physics_process(delta):
 		animated_sprite_2d.flip_h = true
 	elif velocity.x > 0:
 		animated_sprite_2d.flip_h = false
+		
+	var was_on_floor = is_on_floor()
 	move_and_slide()
+	var just_left_ledge = was_on_floor and is_on_floor() and velocity.y >= 0
+	if just_left_ledge:
+		coyote_timer.start()
