@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8e8q56jb700x"]
+[gd_scene load_steps=4 format=3 uid="uid://c8e8q56jb700x"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_c1rvv"]
+[ext_resource type="Texture2D" uid="uid://b482sb0hkpxi" path="res://Assets/Backgrounds/Background.png" id="2_0flmk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6dgfb"]
-size = Vector2(287, 138)
+size = Vector2(349, 180)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_c1rvv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_0flmk")
 
 [node name="Area2D" type="Area2D" parent="."]
 
