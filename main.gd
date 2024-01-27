@@ -4,13 +4,6 @@ extends Node2D
 func _on_play_pressed():
 	get_tree().quit()
 	
-	
-
-func _on_play_mouse_entered():
-	pass
-	
-
-
 
 
 func _on_quit_pressed():
