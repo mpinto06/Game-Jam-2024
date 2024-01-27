@@ -1,116 +1,114 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7b3n48ktcaod"]
+[gd_scene load_steps=5 format=3 uid="uid://cub5axh8pmcih"]
 
-[ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="1_xnj7o"]
+[ext_resource type="Script" path="res://Scenes/moving_block.gd" id="1_b1cya"]
+[ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="1_wb0kf"]
 
-[sub_resource type="GDScript" id="GDScript_prn5p"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_otjuw"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f1g3x"]
 size = Vector2(64, 80)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xmv7q"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ffpyt"]
 size = Vector2(50, 79.5)
 
-[node name="MovingTile" type="CharacterBody2D"]
-texture_filter = 1
-script = SubResource("GDScript_prn5p")
+[node name="MovingBlock" type="CharacterBody2D"]
+script = ExtResource("1_b1cya")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_xnj7o")
+texture = ExtResource("1_wb0kf")
 region_enabled = true
 region_rect = Rect2(144, 0, 32, 32)
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(-16, -24)
-texture = ExtResource("1_xnj7o")
+texture = ExtResource("1_wb0kf")
 region_enabled = true
 region_rect = Rect2(96, 0, 32, 16)
 
 [node name="Sprite2D4" type="Sprite2D" parent="."]
 position = Vector2(16, -24)
-texture = ExtResource("1_xnj7o")
+texture = ExtResource("1_wb0kf")
 region_enabled = true
 region_rect = Rect2(112, 0, 32, 16)
 
 [node name="Sprite2D5" type="Sprite2D" parent="."]
 position = Vector2(-24, -16)
-texture = ExtResource("1_xnj7o")
+texture = ExtResource("1_wb0kf")
 region_enabled = true
 region_rect = Rect2(96, 0, 16, 32)
 
 [node name="Sprite2D6" type="Sprite2D" parent="."]
 position = Vector2(-24, 24)
-texture = ExtResource("1_xnj7o")
+texture = ExtResource("1_wb0kf")
 region_enabled = true
 region_rect = Rect2(96, 16, 16, 16)
 
 [node name="Sprite2D16" type="Sprite2D" parent="."]
 position = Vector2(-24, 40)
-texture = ExtResource("1_xnj7o")
+texture = ExtResource("1_wb0kf")
 region_enabled = true
 region_rect = Rect2(96, 16, 16, 16)
 
 [node name="Sprite2D7" type="Sprite2D" parent="."]
 position = Vector2(24, 40)
-texture = ExtResource("1_xnj7o")
+texture = ExtResource("1_wb0kf")
 region_enabled = true
 region_rect = Rect2(128, 16, 16, 16)
 
 [node name="Sprite2D15" type="Sprite2D" parent="."]
 position = Vector2(24, 24)
-texture = ExtResource("1_xnj7o")
+texture = ExtResource("1_wb0kf")
 region_enabled = true
 region_rect = Rect2(128, 16, 16, 16)
 
 [node name="Sprite2D8" type="Sprite2D" parent="."]
 position = Vector2(-8, 40)
-texture = ExtResource("1_xnj7o")
+texture = ExtResource("1_wb0kf")
 region_enabled = true
 region_rect = Rect2(112, 16, 16, 16)
 
 [node name="Sprite2D9" type="Sprite2D" parent="."]
 position = Vector2(8, 40)
-texture = ExtResource("1_xnj7o")
+texture = ExtResource("1_wb0kf")
 region_enabled = true
 region_rect = Rect2(112, 16, 16, 16)
 
 [node name="Sprite2D10" type="Sprite2D" parent="."]
 position = Vector2(24, -8)
-texture = ExtResource("1_xnj7o")
+texture = ExtResource("1_wb0kf")
 region_enabled = true
 region_rect = Rect2(128, 16, 16, 16)
 
 [node name="Sprite2D11" type="Sprite2D" parent="."]
 position = Vector2(24, 8)
-texture = ExtResource("1_xnj7o")
+texture = ExtResource("1_wb0kf")
 region_enabled = true
 region_rect = Rect2(128, 16, 16, 16)
 
 [node name="Sprite2D12" type="Sprite2D" parent="."]
 position = Vector2(-24, 8)
-texture = ExtResource("1_xnj7o")
+texture = ExtResource("1_wb0kf")
 region_enabled = true
 region_rect = Rect2(96, 16, 16, 16)
 
 [node name="Sprite2D13" type="Sprite2D" parent="."]
 position = Vector2(-8, 24)
-texture = ExtResource("1_xnj7o")
+texture = ExtResource("1_wb0kf")
 region_enabled = true
 region_rect = Rect2(112, 16, 16, 16)
 
 [node name="Sprite2D14" type="Sprite2D" parent="."]
 position = Vector2(8, 24)
-texture = ExtResource("1_xnj7o")
+texture = ExtResource("1_wb0kf")
 region_enabled = true
 region_rect = Rect2(112, 16, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
-shape = SubResource("RectangleShape2D_otjuw")
+shape = SubResource("RectangleShape2D_f1g3x")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="PlayerDetection" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
 position = Vector2(-57, 8.25)
-shape = SubResource("RectangleShape2D_xmv7q")
+shape = SubResource("RectangleShape2D_ffpyt")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]

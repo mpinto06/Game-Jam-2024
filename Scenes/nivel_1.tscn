@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://ikw4ujf8ivca" path="res://Assets/Backgrounds/Blue.png" id="1_yta4c"]
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="2_10lax"]
 [ext_resource type="PackedScene" uid="uid://udwgo6dsj2u3" path="res://Scenes/player.tscn" id="3_6xi8w"]
+[ext_resource type="PackedScene" uid="uid://cub5axh8pmcih" path="res://Scenes/moving_block.tscn" id="4_8ffc4"]
 [ext_resource type="PackedScene" uid="uid://c8hj554qvh75q" path="res://Scenes/spike.tscn" id="4_woenx"]
 [ext_resource type="PackedScene" uid="uid://kg6fkhsrflkj" path="res://Scenes/puente.tscn" id="5_wonii"]
-[ext_resource type="PackedScene" uid="uid://b7b3n48ktcaod" path="res://Scenes/moving_tile.tscn" id="6_43pxr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2bum4"]
 texture = ExtResource("2_10lax")
@@ -487,6 +487,11 @@ metadata/_edit_lock_ = true
 position = Vector2(82, 337)
 metadata/_edit_lock_ = true
 
+[node name="MovingBlock" parent="." instance=ExtResource("4_8ffc4")]
+texture_filter = 1
+position = Vector2(2688, 288)
+scale = Vector2(3, 3)
+
 [node name="Spikes" type="Node" parent="."]
 
 [node name="Spike" parent="Spikes" instance=ExtResource("4_woenx")]
@@ -526,7 +531,3 @@ position = Vector2(1131, 440)
 
 [node name="Puente3" parent="Puentes" instance=ExtResource("5_wonii")]
 position = Vector2(1284, 440)
-
-[node name="MovingTile" parent="." instance=ExtResource("6_43pxr")]
-position = Vector2(2688, 288)
-scale = Vector2(3, 3)
