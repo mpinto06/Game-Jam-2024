@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var coyote_timer = $CoyoteTimer
+@onready var animated_sprite_2d_2 = $AnimatedSprite2D2
+@onready var timer = $Timer
 
 const SPEED = 400
 const JUMP_VELOCITY = -900
@@ -43,4 +45,14 @@ func _physics_process(delta):
 		coyote_timer.start()
 
 func die():
+	timer.start()
+	animated_sprite_2d.hide()
+	animated_sprite_2d_2.show()
+	get_tree().paused = true
+	animated_sprite_2d_2.animation = "death"
+
+
+func _on_timer_timeout():
+	get_tree().paused = false
 	get_tree().reload_current_scene()
+	
