@@ -217,11 +217,13 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_3avow")
 animation = &"Run"
 autoplay = "Idle"
-frame_progress = 0.888096
+frame_progress = 0.293275
 
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D"]
 position = Vector2(0, -1.58946e-07)
 scale = Vector2(0.333333, 0.333333)
+offset = Vector2(250, -350)
+anchor_mode = 0
 drag_vertical_enabled = true
 drag_top_margin = 0.7
 drag_bottom_margin = 0.7
