@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cyrtaup47ppsc" path="res://Assets/Characters/Main/Idle.png" id="1_hkrrf"]
 [ext_resource type="Script" path="res://Scenes/player.gd" id="1_lwcwc"]
-[ext_resource type="Texture2D" path="res://Assets/Characters/Main/Death.png" id="2_b7u3n"]
-[ext_resource type="Texture2D" path="res://Assets/Characters/Main/Jump.png" id="3_0gpvi"]
-[ext_resource type="Texture2D" path="res://Assets/Characters/Main/Run.png" id="4_11jgp"]
+[ext_resource type="Texture2D" uid="uid://bs2lo3s33b8hy" path="res://Assets/Characters/Main/Death.png" id="2_b7u3n"]
+[ext_resource type="Texture2D" uid="uid://c7eayro41t07s" path="res://Assets/Characters/Main/Jump.png" id="3_0gpvi"]
+[ext_resource type="Texture2D" uid="uid://b3vvxsjfk6fqa" path="res://Assets/Characters/Main/Run.png" id="4_11jgp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eqnxe"]
 atlas = ExtResource("2_b7u3n")

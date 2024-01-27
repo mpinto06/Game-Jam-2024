@@ -41,6 +41,3 @@ func _physics_process(delta):
 	var just_left_ledge = was_on_floor and is_on_floor() and velocity.y >= 0
 	if just_left_ledge:
 		coyote_timer.start()
-
-func die():
-	get_tree().reload_current_scene()
