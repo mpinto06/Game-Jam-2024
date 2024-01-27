@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ikw4ujf8ivca" path="res://Assets/Backgrounds/Blue.png" id="1_tswar"]
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="2_vh1qk"]
 [ext_resource type="PackedScene" uid="uid://udwgo6dsj2u3" path="res://Scenes/player.tscn" id="3_86kur"]
-[ext_resource type="PackedScene" uid="uid://dren6rivltu6d" path="res://Scenes/moving_platform.tscn" id="4_cp5fx"]
+[ext_resource type="PackedScene" uid="uid://boloid6dwxn6x" path="res://Scenes/DownMovePlatform.tscn" id="4_7npiu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q1tu7"]
 texture = ExtResource("2_vh1qk")
@@ -479,7 +479,8 @@ layer_0/tile_data = PackedInt32Array(524288, 393216, 0, 589824, 393216, 1, 58982
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("3_86kur")]
+[node name="MainCharacter" parent="." instance=ExtResource("3_86kur")]
 position = Vector2(63, 282)
 
-[node name="MovingPlatform" parent="." instance=ExtResource("4_cp5fx")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_7npiu")]
+position = Vector2(1613, 262)

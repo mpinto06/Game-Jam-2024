@@ -5,7 +5,6 @@ const SPEED = 400
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var player
-
 var run_away = false
 
 func _physics_process(delta):
