@@ -1,12 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjq8gxm6q5qi7"]
-
-[ext_resource type="Texture2D" path="res://Assets/pxArt_3.png" id="1_vp13d"]
+[gd_scene load_steps=2 format=3 uid="uid://cjq8gxm6q5qi7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8i68p"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_vp13d")
+"texture": null
 }],
 "loop": true,
 "name": &"default",
