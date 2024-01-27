@@ -7,7 +7,10 @@ const SPEED = 350
 var player
 
 var run_away = false
+
+
 @onready var collision_shape_2d = $CollisionShape2D
+
 func _physics_process(delta):
 	if run_away:
 		if self.position.x < 3264:
@@ -23,6 +26,7 @@ func _physics_process(delta):
 		velocity.x = 0
 		
 	move_and_slide()
+
 
 
 

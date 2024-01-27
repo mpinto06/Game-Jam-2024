@@ -1,12 +1,52 @@
 [gd_scene load_steps=3 format=3 uid="uid://c8e8q56jb700x"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_c1rvv"]
+[sub_resource type="GDScript" id="GDScript_afpiq"]
+script/source = "extends Node2D
+var runaway:bool
+
+func _on_play_pressed():
+	get_tree().quit()
+	
+
+
+func _on_quit_pressed():
+	get_tree().change_scene_to_file(\"res://Scenes/nivel_1.tscn\") # Replace with function body.
+
+
+func _on_area_2d_mouse_entered():
+	runaway = true
+
+func _on_area_2d_mouse_exited():
+	runaway = false
+	
+	
+	
+func _physics_process(delta):
+	if runaway:
+		var direction = (get_global_mouse_position()-$Play.position).normalized()
+		$play.velocity.y = -direction.y * SPEED * 5
+		#velocity.x = -direction.x * SPEED + 300
+		if self.position.y > 600:
+			self.queue_free()
+	else:
+		velocity.x = 0
+		
+	move_and_slide()
+
+
+		
+	
+	
+	
+	
+	
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6dgfb"]
-size = Vector2(287, 138)
+size = Vector2(299, 174)
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_c1rvv")
+script = SubResource("GDScript_afpiq")
 
 [node name="Area2D" type="Area2D" parent="."]
 
