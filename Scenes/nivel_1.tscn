@@ -528,5 +528,5 @@ position = Vector2(1131, 440)
 position = Vector2(1284, 440)
 
 [node name="MovingTile" parent="." instance=ExtResource("6_43pxr")]
-position = Vector2(2656, 288)
+position = Vector2(2688, 288)
 scale = Vector2(3, 3)
