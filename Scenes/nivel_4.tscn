@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dnxxmq2geqg50"]
+[gd_scene load_steps=9 format=3 uid="uid://dnxxmq2geqg50"]
 
 [ext_resource type="Texture2D" uid="uid://ikw4ujf8ivca" path="res://Assets/Backgrounds/Blue.png" id="1_pnnh5"]
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="2_bnxiq"]
 [ext_resource type="PackedScene" uid="uid://udwgo6dsj2u3" path="res://Scenes/player.tscn" id="3_a70fp"]
+[ext_resource type="PackedScene" uid="uid://4j0a2vx6d1cd" path="res://Scenes/final.tscn" id="4_2tm6v"]
+[ext_resource type="PackedScene" uid="uid://c8e8q56jb700x" path="res://main.tscn" id="5_0pvek"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2bum4"]
 texture = ExtResource("2_bnxiq")
@@ -523,3 +525,7 @@ position = Vector2(880, 349)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(178, 338.656)
 shape = SubResource("RectangleShape2D_wcihi")
+
+[node name="Final" parent="." instance=ExtResource("4_2tm6v")]
+position = Vector2(-151, 388)
+target = ExtResource("5_0pvek")
