@@ -32,28 +32,40 @@ region_enabled = true
 region_rect = Rect2(96, 0, 16, 32)
 
 [node name="Sprite2D6" type="Sprite2D" parent="."]
-position = Vector2(-24, 32)
+position = Vector2(-24, 24)
 texture = ExtResource("1_xnj7o")
 region_enabled = true
-region_rect = Rect2(96, 16, 16, 32)
+region_rect = Rect2(96, 16, 16, 16)
+
+[node name="Sprite2D16" type="Sprite2D" parent="."]
+position = Vector2(-24, 40)
+texture = ExtResource("1_xnj7o")
+region_enabled = true
+region_rect = Rect2(96, 16, 16, 16)
 
 [node name="Sprite2D7" type="Sprite2D" parent="."]
-position = Vector2(24, 32)
+position = Vector2(24, 40)
 texture = ExtResource("1_xnj7o")
 region_enabled = true
-region_rect = Rect2(128, 16, 16, 32)
+region_rect = Rect2(128, 16, 16, 16)
+
+[node name="Sprite2D15" type="Sprite2D" parent="."]
+position = Vector2(24, 24)
+texture = ExtResource("1_xnj7o")
+region_enabled = true
+region_rect = Rect2(128, 16, 16, 16)
 
 [node name="Sprite2D8" type="Sprite2D" parent="."]
 position = Vector2(-8, 40)
 texture = ExtResource("1_xnj7o")
 region_enabled = true
-region_rect = Rect2(112, 32, 16, 16)
+region_rect = Rect2(112, 16, 16, 16)
 
 [node name="Sprite2D9" type="Sprite2D" parent="."]
 position = Vector2(8, 40)
 texture = ExtResource("1_xnj7o")
 region_enabled = true
-region_rect = Rect2(112, 32, 16, 16)
+region_rect = Rect2(112, 16, 16, 16)
 
 [node name="Sprite2D10" type="Sprite2D" parent="."]
 position = Vector2(24, -8)
