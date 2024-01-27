@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cidbdb11qmm40"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gb7d"]
+size = Vector2(296, 425)
+
+[node name="EnemyType1" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+animation = &"Run"
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_0gb7d")
