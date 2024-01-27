@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dren6rivltu6d"]
+
+[ext_resource type="Script" path="res://Scenes/TriggerArea.gd" id="1_87ytu"]
+[ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="1_rfai4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18blh"]
+size = Vector2(64, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6hml8"]
+size = Vector2(48, 6)
+
+[node name="MovingPlatform" type="Node2D"]
+
+[node name="TriggerArea" type="Area2D" parent="."]
+script = ExtResource("1_87ytu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_18blh")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_rfai4")
+region_enabled = true
+region_rect = Rect2(271, -0.486824, 49.3354, 5.78782)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_6hml8")
