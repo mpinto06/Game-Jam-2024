@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 400
+const SPEED = 350
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var player
@@ -24,3 +24,8 @@ func _on_player_detection_body_entered(body):
 	if body.name == "MainCharacter":
 		player = body
 		run_away = true
+
+
+func _on_player_detection_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
+	if body.name == "MainCharacter":
+		run_away = false

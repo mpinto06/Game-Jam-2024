@@ -7,7 +7,7 @@
 size = Vector2(64, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffpyt"]
-size = Vector2(50, 79.5)
+size = Vector2(50, 155)
 
 [node name="MovingBlock" type="CharacterBody2D"]
 script = ExtResource("1_b1cya")
@@ -108,7 +108,8 @@ shape = SubResource("RectangleShape2D_f1g3x")
 [node name="PlayerDetection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
-position = Vector2(-57, 8.25)
+position = Vector2(-57, -29.5)
 shape = SubResource("RectangleShape2D_ffpyt")
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_shape_exited" from="PlayerDetection" to="." method="_on_player_detection_body_shape_exited"]
