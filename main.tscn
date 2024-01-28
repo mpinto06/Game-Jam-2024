@@ -19,11 +19,14 @@ offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("2_0flmk")
 
+[node name="Timer" type="Timer" parent="."]
+
 [node name="Play" parent="." instance=ExtResource("3_tvlxw")]
 offset_left = 466.0
 offset_top = 172.0
 offset_right = 716.0
 offset_bottom = 297.0
+toggle_mode = true
 
 [node name="Area2D" type="Area2D" parent="Play"]
 position = Vector2(-466, -172)
@@ -49,6 +52,8 @@ bus = &"Music"
 [node name="Nope" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_iwqk0")
 
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="hidden" from="Play" to="." method="_on_play_hidden"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="mouse_entered" from="Play/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Play/Area2D" to="." method="_on_area_2d_mouse_exited"]
