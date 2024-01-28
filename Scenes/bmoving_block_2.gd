@@ -10,7 +10,7 @@ var run_away = false
 func _physics_process(delta):
 	if run_away:
 		var direction = (player.position - self.position).normalized()
-		velocity.y = -SPEED * 10
+		velocity.y = -SPEED * 7
 		#velocity.x = -direction.x * SPEED + 300
 		if self.position.y > 600:
 			self.queue_free()

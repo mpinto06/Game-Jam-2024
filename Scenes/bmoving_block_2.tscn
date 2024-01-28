@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cv6auxo4eb2cj"]
+[gd_scene load_steps=5 format=3 uid="uid://bq4kofyki76uf"]
 
 [ext_resource type="Script" path="res://Scenes/bmoving_block_2.gd" id="1_rvn83"]
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="2_omlol"]
@@ -24,7 +24,7 @@ shape = SubResource("RectangleShape2D_mamx8")
 [node name="PlayerDetection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
-position = Vector2(-32, -32)
+position = Vector2(-32, -50)
 shape = SubResource("RectangleShape2D_2v1vh")
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
