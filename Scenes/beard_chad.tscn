@@ -36,7 +36,7 @@ radius = 1088.03
 size = Vector2(224, 65)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ii7uh"]
-size = Vector2(384, 368)
+size = Vector2(384, 385)
 
 [node name="BeardChad" type="CharacterBody2D"]
 script = ExtResource("1_6y6qr")
@@ -66,7 +66,7 @@ shape = SubResource("RectangleShape2D_3w2xr")
 [node name="PlayerCollision" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
-position = Vector2(0, 31)
+position = Vector2(0, 39.5)
 shape = SubResource("RectangleShape2D_ii7uh")
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]

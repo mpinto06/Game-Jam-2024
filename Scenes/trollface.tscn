@@ -37,7 +37,7 @@ radius = 1088.03
 size = Vector2(224, 65)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_spbgo"]
-size = Vector2(384, 368)
+size = Vector2(384, 385)
 
 [node name="Trollface" type="CharacterBody2D"]
 script = ExtResource("1_j73gt")
@@ -68,7 +68,7 @@ shape = SubResource("RectangleShape2D_t1kbj")
 [node name="PlayerCollision" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
-position = Vector2(0, 31)
+position = Vector2(0, 39.5)
 shape = SubResource("RectangleShape2D_spbgo")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
