@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rcciind83mns"
-path="res://.godot/imported/End (Idle).png-a637541158afcfc263614b8bf2f9f02c.ctex"
+uid="uid://c487pnii8owqk"
+path="res://.godot/imported/1.png-428292f882d0e2d227a585453776103a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Others/End (Idle).png"
-dest_files=["res://.godot/imported/End (Idle).png-a637541158afcfc263614b8bf2f9f02c.ctex"]
+source_file="res://Assets/Characters/Enemies/Josh/Run/1.png"
+dest_files=["res://.godot/imported/1.png-428292f882d0e2d227a585453776103a.ctex"]
 
 [params]
 

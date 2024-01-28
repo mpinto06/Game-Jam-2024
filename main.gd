@@ -14,4 +14,4 @@ func _on_area_2d_mouse_entered():
 	$Play.set_position(Vector2(-200,-200))
 
 func _on_area_2d_mouse_exited():
-	$Play.set_position(Vector2(450, 180))
+	$Play.set_position(Vector2(465, 180))

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rcciind83mns"
-path="res://.godot/imported/End (Idle).png-a637541158afcfc263614b8bf2f9f02c.ctex"
+uid="uid://rbjh45mtttp0"
+path="res://.godot/imported/Idle.png-8a2dde3449e798e48e1757805ce22c26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Others/End (Idle).png"
-dest_files=["res://.godot/imported/End (Idle).png-a637541158afcfc263614b8bf2f9f02c.ctex"]
+source_file="res://Assets/Characters/Enemies/Cheems/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-8a2dde3449e798e48e1757805ce22c26.ctex"]
 
 [params]
 
