@@ -11,7 +11,9 @@ func _on_quit_pressed():
 
 
 func _on_area_2d_mouse_entered():
-	$Play.set_position(Vector2(-200,-200))
+	#$Play.set_physics_process()
+	#$Play.set_position(Vector2(-200,-200))
+	pass
 
 func _on_area_2d_mouse_exited():
 	$Play.set_position(Vector2(465, 180))
