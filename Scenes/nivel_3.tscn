@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bmh4y2yrbf6c8"]
+[gd_scene load_steps=16 format=3 uid="uid://bmh4y2yrbf6c8"]
 
 [ext_resource type="Texture2D" uid="uid://ikw4ujf8ivca" path="res://Assets/Backgrounds/Blue.png" id="1_tswar"]
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="2_vh1qk"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/josh.tscn" id="8_grt4h"]
 [ext_resource type="PackedScene" path="res://Scenes/normal_chad.tscn" id="9_jfxmy"]
 [ext_resource type="PackedScene" path="res://Scenes/beard_chad.tscn" id="10_muyr8"]
+[ext_resource type="AudioStream" uid="uid://b8kytpi58h1uk" path="res://Assets/Audio/Music/arabicbg.mp3" id="12_5ne1h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q1tu7"]
 texture = ExtResource("2_vh1qk")
@@ -566,3 +567,8 @@ scale = Vector2(0.3, 0.3)
 [node name="BeardChad" parent="Enemigos" instance=ExtResource("10_muyr8")]
 position = Vector2(2370, 314)
 scale = Vector2(0.3, 0.3)
+
+[node name="Background" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_5ne1h")
+autoplay = true
+bus = &"Music"
