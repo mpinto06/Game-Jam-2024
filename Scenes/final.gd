@@ -5,7 +5,7 @@ extends Area2D
 @onready var timer = $Timer
 
 func _on_body_entered(body):
-	if body.name == "CharacterBody2D":
+	if body.name == "MainCharacter":
 		get_tree().paused = true
 		animated_sprite_2d.play("grabbed")
 		timer.start()
