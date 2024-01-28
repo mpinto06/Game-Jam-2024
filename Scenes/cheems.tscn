@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=3 uid="uid://6tbe8pxw3dia"]
+
+[ext_resource type="Script" path="res://Scenes/cheems.gd" id="1_exjlx"]
+[ext_resource type="Texture2D" uid="uid://rbjh45mtttp0" path="res://Assets/Characters/Enemies/Cheems/Idle.png" id="2_t2ulb"]
+[ext_resource type="Texture2D" uid="uid://bxqx8sbab1p0m" path="res://Assets/Characters/Enemies/Cheems/Run/0.png" id="3_5naqo"]
+[ext_resource type="Texture2D" uid="uid://dmltde3a5v03o" path="res://Assets/Characters/Enemies/Cheems/Run/1.png" id="4_0mot3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_udepe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_t2ulb")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5naqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0mot3")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5ptv"]
+size = Vector2(296, 425)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nugg0"]
+radius = 1088.03
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1287j"]
+size = Vector2(224, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ixate"]
+size = Vector2(384, 368)
+
+[node name="Cheems" type="CharacterBody2D"]
+script = ExtResource("1_exjlx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_udepe")
+animation = &"Run"
+autoplay = "Idle"
+flip_h = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_a5ptv")
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+shape = SubResource("CircleShape2D_nugg0")
+
+[node name="PlayerAbove" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerAbove"]
+position = Vector2(0, -197.5)
+shape = SubResource("RectangleShape2D_1287j")
+
+[node name="PlayerCollision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
+position = Vector2(0, 31)
+shape = SubResource("RectangleShape2D_ixate")
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="PlayerAbove" to="." method="_on_player_above_body_entered"]
+[connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_collision_body_entered"]

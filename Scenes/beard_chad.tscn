@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://6d37fh5o3ohk"]
+
+[ext_resource type="Script" path="res://Scenes/beard_chad.gd" id="1_6y6qr"]
+[ext_resource type="Texture2D" uid="uid://dnxoy8rjs8wnw" path="res://Assets/Characters/Enemies/BeardChad/Run/1.png" id="1_7takk"]
+[ext_resource type="Texture2D" uid="uid://dp0lu4ybdrgtu" path="res://Assets/Characters/Enemies/BeardChad/Run/0.png" id="2_kcpbn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oyb0o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7takk")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kcpbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_7takk")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7wsrs"]
+size = Vector2(296, 425)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3rhln"]
+radius = 1088.03
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3w2xr"]
+size = Vector2(224, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ii7uh"]
+size = Vector2(384, 368)
+
+[node name="BeardChad" type="CharacterBody2D"]
+script = ExtResource("1_6y6qr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_oyb0o")
+animation = &"Idle"
+autoplay = "Idle"
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_7wsrs")
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+shape = SubResource("CircleShape2D_3rhln")
+
+[node name="PlayerAbove" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerAbove"]
+position = Vector2(0, -197.5)
+shape = SubResource("RectangleShape2D_3w2xr")
+
+[node name="PlayerCollision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
+position = Vector2(0, 31)
+shape = SubResource("RectangleShape2D_ii7uh")
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="PlayerAbove" to="." method="_on_player_above_body_entered"]
+[connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_collision_body_entered"]

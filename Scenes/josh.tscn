@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=3 uid="uid://b6k03dky0pgth"]
+
+[ext_resource type="Script" path="res://Scenes/josh.gd" id="1_jk2cl"]
+[ext_resource type="Texture2D" uid="uid://ml2rne8muhna" path="res://Assets/Characters/Enemies/Josh/Idle.png" id="2_i7dnc"]
+[ext_resource type="Texture2D" uid="uid://bttm2b77pd25h" path="res://Assets/Characters/Enemies/Josh/Run/0.png" id="3_kn5t3"]
+[ext_resource type="Texture2D" uid="uid://c487pnii8owqk" path="res://Assets/Characters/Enemies/Josh/Run/1.png" id="4_rotqk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_22pld"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_i7dnc")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_kn5t3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rotqk")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ptcrc"]
+size = Vector2(296, 425)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ahkgj"]
+radius = 1088.03
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sltqt"]
+size = Vector2(224, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x71n2"]
+size = Vector2(384, 368)
+
+[node name="Josh" type="CharacterBody2D"]
+script = ExtResource("1_jk2cl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_22pld")
+animation = &"Run"
+autoplay = "Idle"
+flip_h = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_ptcrc")
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+shape = SubResource("CircleShape2D_ahkgj")
+
+[node name="PlayerAbove" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerAbove"]
+position = Vector2(0, -197.5)
+shape = SubResource("RectangleShape2D_sltqt")
+
+[node name="PlayerCollision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
+position = Vector2(0, 31)
+shape = SubResource("RectangleShape2D_x71n2")
+
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="PlayerAbove" to="." method="_on_player_above_body_entered"]
+[connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_collision_body_entered"]
