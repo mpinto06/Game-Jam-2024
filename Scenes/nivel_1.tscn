@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cvihistgegmt5"]
+[gd_scene load_steps=16 format=3 uid="uid://cvihistgegmt5"]
 
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="2_10lax"]
 [ext_resource type="PackedScene" uid="uid://udwgo6dsj2u3" path="res://Scenes/player.tscn" id="3_6xi8w"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/final.tscn" id="9_4wa4n"]
 [ext_resource type="Texture2D" uid="uid://bcg7r5qgwdtsg" path="res://Assets/Backgrounds/background_nivel.png" id="10_85aye"]
 [ext_resource type="PackedScene" uid="uid://bmh4y2yrbf6c8" path="res://Scenes/nivel_3.tscn" id="10_cvown"]
+[ext_resource type="AudioStream" uid="uid://b8kytpi58h1uk" path="res://Assets/Audio/Music/arabicbg.mp3" id="11_nxwt4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2bum4"]
 texture = ExtResource("2_10lax")
@@ -726,3 +727,8 @@ motion_mirroring = Vector2(1152, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(578, 326)
 texture = ExtResource("10_85aye")
+
+[node name="Background" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_nxwt4")
+autoplay = true
+bus = &"Music"
