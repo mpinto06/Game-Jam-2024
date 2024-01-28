@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://bmh4y2yrbf6c8"]
+[gd_scene load_steps=17 format=3 uid="uid://bmh4y2yrbf6c8"]
 
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="2_vh1qk"]
 [ext_resource type="PackedScene" uid="uid://udwgo6dsj2u3" path="res://Scenes/player.tscn" id="3_86kur"]
 [ext_resource type="PackedScene" path="res://Scenes/DownMovePlatform.tscn" id="4_7npiu"]
 [ext_resource type="PackedScene" uid="uid://4j0a2vx6d1cd" path="res://Scenes/final.tscn" id="5_fr64p"]
+[ext_resource type="PackedScene" uid="uid://dnxxmq2geqg50" path="res://Scenes/nivel_4.tscn" id="6_1xdoi"]
 [ext_resource type="PackedScene" uid="uid://c8hj554qvh75q" path="res://Scenes/spike.tscn" id="6_j3mm7"]
 [ext_resource type="PackedScene" path="res://Scenes/angry_trollface.tscn" id="7_04brx"]
 [ext_resource type="PackedScene" path="res://Scenes/josh.tscn" id="8_grt4h"]
@@ -496,6 +497,7 @@ position = Vector2(1613, 262)
 
 [node name="Final" parent="." instance=ExtResource("5_fr64p")]
 position = Vector2(4671, 67)
+target = ExtResource("6_1xdoi")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -574,10 +576,55 @@ position = Vector2(3484, 587)
 [node name="Spike23" parent="Spikes" instance=ExtResource("6_j3mm7")]
 position = Vector2(3532, 587)
 
+[node name="Spike24" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(4041, 345)
+
+[node name="Spike25" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(4087, 345)
+
+[node name="Spike26" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(4133, 345)
+
+[node name="Spike27" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(4179, 345)
+
+[node name="Spike28" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(4203, 345)
+
+[node name="Spike29" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(4287, 345)
+
+[node name="Spike30" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(4332, 345)
+
+[node name="Spike31" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(4378, 345)
+
+[node name="Spike32" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(4424, 345)
+
+[node name="Spike33" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(4448, 345)
+
+[node name="Spike34" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(4527, 345)
+
+[node name="Spike35" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(4573, 345)
+
+[node name="Spike36" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(4619, 345)
+
+[node name="Spike37" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(4665, 345)
+
+[node name="Spike38" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(4689, 345)
+
 [node name="Enemigos" type="Node" parent="."]
 
 [node name="AngryTrollface" parent="Enemigos" instance=ExtResource("7_04brx")]
-position = Vector2(2714, 276)
+position = Vector2(2958, 314)
 scale = Vector2(0.3, 0.3)
 
 [node name="Josh" parent="Enemigos" instance=ExtResource("8_grt4h")]
@@ -593,6 +640,7 @@ position = Vector2(2370, 314)
 scale = Vector2(0.3, 0.3)
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("10_w2v0d")]
+scroll_offset = Vector2(427, -74.5)
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_dqcd3")
