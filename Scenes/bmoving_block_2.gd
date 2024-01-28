@@ -10,7 +10,7 @@ var run_away = false
 func _physics_process(delta):
 	if run_away and position.y > 150:
 		var direction = (player.position - self.position).normalized()
-		velocity.y = -SPEED * 10
+		velocity.y = -SPEED * 15
 		move_and_slide()
 	else:
 		run_away = false
