@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8e8q56jb700x"]
+[gd_scene load_steps=8 format=3 uid="uid://c8e8q56jb700x"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_c1rvv"]
 [ext_resource type="Texture2D" uid="uid://b482sb0hkpxi" path="res://Assets/Backgrounds/Background.png" id="2_0flmk"]
 [ext_resource type="PackedScene" uid="uid://kauedwsbajd3" path="res://play.tscn" id="3_tvlxw"]
 [ext_resource type="Texture2D" uid="uid://ch37pwoweofy2" path="res://Assets/Others/Exit_Button.png" id="4_hsfmn"]
 [ext_resource type="Texture2D" uid="uid://dqdgkrmag2v11" path="res://Assets/Others/Exit_Button_Pressed.png" id="5_utbof"]
+[ext_resource type="AudioStream" uid="uid://b8kytpi58h1uk" path="res://Assets/Audio/Music/arabicbg.mp3" id="6_q284v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6dgfb"]
 size = Vector2(427, 274)
@@ -38,6 +39,11 @@ offset_bottom = 587.0
 texture_normal = ExtResource("4_hsfmn")
 texture_pressed = ExtResource("5_utbof")
 texture_focused = ExtResource("5_utbof")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_q284v")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="mouse_entered" from="Play/Area2D" to="." method="_on_area_2d_mouse_entered"]
