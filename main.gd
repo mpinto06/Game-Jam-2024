@@ -2,16 +2,22 @@ extends Node2D
 
 
 func _on_play_pressed():
-	get_tree().quit()
-	
+	$Play.hide()	
 
 
 func _on_quit_pressed():
-	get_tree().change_scene_to_file("res://Scenes/nivel_1.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://Scenes/nivel_1.tscn")
+	 # Replace with function body.
 
 
 func _on_area_2d_mouse_entered():
-	$Play.set_position(Vector2(-200,-200))
+	#$Play.set_physics_process()
+	#$Play.set_position(Vector2(-200,-200))
+	var tween = get_tree().create_tween()
+	tween.tween_property($Play, "position", Vector2(-200,-100), 0.7)
+
+
 
 func _on_area_2d_mouse_exited():
-	$Play.set_position(Vector2(450, 180))
+	var tween = get_tree().create_tween()
+	tween.tween_property($Play, "position", Vector2(465,180), 0.7)
