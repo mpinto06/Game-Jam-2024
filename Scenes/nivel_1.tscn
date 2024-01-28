@@ -1,15 +1,15 @@
 [gd_scene load_steps=15 format=3 uid="uid://cvihistgegmt5"]
 
-[ext_resource type="Texture2D" uid="uid://ikw4ujf8ivca" path="res://Assets/Backgrounds/Blue.png" id="1_yta4c"]
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="2_10lax"]
 [ext_resource type="PackedScene" uid="uid://udwgo6dsj2u3" path="res://Scenes/player.tscn" id="3_6xi8w"]
 [ext_resource type="PackedScene" uid="uid://cub5axh8pmcih" path="res://Scenes/moving_block.tscn" id="4_8ffc4"]
 [ext_resource type="PackedScene" uid="uid://c8hj554qvh75q" path="res://Scenes/spike.tscn" id="4_woenx"]
 [ext_resource type="PackedScene" uid="uid://kg6fkhsrflkj" path="res://Scenes/puente.tscn" id="5_wonii"]
-[ext_resource type="PackedScene" uid="uid://bmxktvwhgquh5" path="res://Scenes/trollface.tscn" id="7_w2lxv"]
-[ext_resource type="PackedScene" uid="uid://cdagf86861wk2" path="res://Scenes/angry_trollface.tscn" id="8_q5gnl"]
-[ext_resource type="PackedScene" path="res://Scenes/final.tscn" id="9_4wa4n"]
-[ext_resource type="PackedScene" uid="uid://c8e8q56jb700x" path="res://main.tscn" id="10_7ttej"]
+[ext_resource type="PackedScene" path="res://Scenes/trollface.tscn" id="7_w2lxv"]
+[ext_resource type="PackedScene" path="res://Scenes/angry_trollface.tscn" id="8_q5gnl"]
+[ext_resource type="PackedScene" uid="uid://4j0a2vx6d1cd" path="res://Scenes/final.tscn" id="9_4wa4n"]
+[ext_resource type="Texture2D" uid="uid://bcg7r5qgwdtsg" path="res://Assets/Backgrounds/background_nivel.png" id="10_85aye"]
+[ext_resource type="PackedScene" uid="uid://bmh4y2yrbf6c8" path="res://Scenes/nivel_3.tscn" id="10_cvown"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2bum4"]
 texture = ExtResource("2_10lax")
@@ -626,21 +626,6 @@ sources/0 = SubResource("TileSetAtlasSource_0ihfu")
 
 [node name="nivel_2" type="Node"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -995.0
-offset_top = -819.0
-offset_right = 7998.0
-offset_bottom = 1424.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_yta4c")
-stretch_mode = 1
-metadata/_edit_lock_ = true
-
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 scale = Vector2(3, 3)
@@ -730,4 +715,14 @@ scale = Vector2(0.3, 0.3)
 
 [node name="Final" parent="." instance=ExtResource("9_4wa4n")]
 position = Vector2(3472, 215)
-target = ExtResource("10_7ttej")
+target = ExtResource("10_cvown")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1, 0)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(578, 326)
+texture = ExtResource("10_85aye")
