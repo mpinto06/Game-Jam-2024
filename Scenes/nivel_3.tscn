@@ -487,6 +487,7 @@ size = Vector2(74, 568)
 [node name="Nivel3" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_vylp1")
 format = 2
@@ -630,18 +631,22 @@ position = Vector2(4689, 345)
 [node name="Enemigos" type="Node" parent="."]
 
 [node name="AngryTrollface" parent="Enemigos" instance=ExtResource("7_04brx")]
+texture_filter = 1
 position = Vector2(2958, 314)
 scale = Vector2(0.2, 0.2)
 
 [node name="Josh" parent="Enemigos" instance=ExtResource("8_grt4h")]
+texture_filter = 1
 position = Vector2(960, 174)
 scale = Vector2(0.2, 0.2)
 
 [node name="NormalChad" parent="Enemigos" instance=ExtResource("9_jfxmy")]
+texture_filter = 1
 position = Vector2(2024, 316)
 scale = Vector2(0.2, 0.2)
 
 [node name="BeardChad" parent="Enemigos" instance=ExtResource("10_muyr8")]
+texture_filter = 1
 position = Vector2(2370, 314)
 scale = Vector2(0.2, 0.2)
 

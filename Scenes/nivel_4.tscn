@@ -562,6 +562,7 @@ position = Vector2(718, 384)
 scale = Vector2(3, 3)
 
 [node name="Spike" parent="." instance=ExtResource("7_qqsk6")]
+texture_filter = 1
 position = Vector2(554, 537)
 
 [node name="Spike" parent="Spike" instance=ExtResource("7_qqsk6")]
@@ -727,6 +728,7 @@ text = "Regresa al inicio xd          "
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Cheems" parent="Enemies" instance=ExtResource("9_vbgag")]
+texture_filter = 1
 position = Vector2(1216, -8)
 scale = Vector2(0.2, 0.2)
 
