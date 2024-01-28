@@ -9,6 +9,7 @@ const JUMP_VELOCITY = -900
 @onready var animated_sprite_2d = $AnimatedSprite2D
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+@onready var audio_stream_player = $AudioStreamPlayer
 
 func _physics_process(delta):
 	velocity.y += gravity * delta
@@ -44,6 +45,7 @@ func _on_player_detection_body_exited(body):
 func _on_player_above_body_entered(body):
 	if body.name == "MainCharacter":
 		body.jump()
+		audio_stream_player.play()
 		self.queue_free()
 
 

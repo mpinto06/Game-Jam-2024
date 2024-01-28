@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://cub5axh8pmcih" path="res://Scenes/moving_block.tscn" id="4_8ffc4"]
 [ext_resource type="PackedScene" uid="uid://c8hj554qvh75q" path="res://Scenes/spike.tscn" id="4_woenx"]
 [ext_resource type="PackedScene" uid="uid://kg6fkhsrflkj" path="res://Scenes/puente.tscn" id="5_wonii"]
-[ext_resource type="PackedScene" path="res://Scenes/trollface.tscn" id="7_w2lxv"]
-[ext_resource type="PackedScene" path="res://Scenes/angry_trollface.tscn" id="8_q5gnl"]
-[ext_resource type="PackedScene" uid="uid://4j0a2vx6d1cd" path="res://Scenes/final.tscn" id="9_4wa4n"]
+[ext_resource type="PackedScene" uid="uid://bmxktvwhgquh5" path="res://Scenes/trollface.tscn" id="7_w2lxv"]
+[ext_resource type="PackedScene" uid="uid://cdagf86861wk2" path="res://Scenes/angry_trollface.tscn" id="8_q5gnl"]
+[ext_resource type="PackedScene" path="res://Scenes/final.tscn" id="9_4wa4n"]
 [ext_resource type="Texture2D" uid="uid://bcg7r5qgwdtsg" path="res://Assets/Backgrounds/background_nivel.png" id="10_85aye"]
 [ext_resource type="PackedScene" uid="uid://bmh4y2yrbf6c8" path="res://Scenes/nivel_3.tscn" id="10_cvown"]
 
