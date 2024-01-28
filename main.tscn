@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c8e8q56jb700x"]
+[gd_scene load_steps=10 format=3 uid="uid://c8e8q56jb700x"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_c1rvv"]
 [ext_resource type="Texture2D" uid="uid://b482sb0hkpxi" path="res://Assets/Backgrounds/Background.png" id="2_0flmk"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dqdgkrmag2v11" path="res://Assets/Others/Exit_Button_Pressed.png" id="5_utbof"]
 [ext_resource type="AudioStream" uid="uid://b8kytpi58h1uk" path="res://Assets/Audio/Music/arabicbg.mp3" id="6_q284v"]
 [ext_resource type="AudioStream" uid="uid://dq8l2drqjxgom" path="res://Assets/Audio/SFX/nope.mp3" id="7_iwqk0"]
+[ext_resource type="Texture2D" uid="uid://dxrdnq5cs7amv" path="res://Assets/Others/logo.png" id="8_54yn7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6dgfb"]
 size = Vector2(427, 274)
@@ -51,6 +52,14 @@ bus = &"Music"
 
 [node name="Nope" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_iwqk0")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 31.0
+offset_top = 451.0
+offset_right = 205.0
+offset_bottom = 625.0
+texture = ExtResource("8_54yn7")
+expand_mode = 1
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="hidden" from="Play" to="." method="_on_play_hidden"]
