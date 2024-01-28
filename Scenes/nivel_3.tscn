@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="2_vh1qk"]
 [ext_resource type="PackedScene" uid="uid://udwgo6dsj2u3" path="res://Scenes/player.tscn" id="3_86kur"]
 [ext_resource type="PackedScene" path="res://Scenes/DownMovePlatform.tscn" id="4_7npiu"]
-[ext_resource type="PackedScene" path="res://Scenes/final.tscn" id="5_fr64p"]
+[ext_resource type="PackedScene" uid="uid://4j0a2vx6d1cd" path="res://Scenes/final.tscn" id="5_fr64p"]
 [ext_resource type="PackedScene" uid="uid://c8hj554qvh75q" path="res://Scenes/spike.tscn" id="6_j3mm7"]
-[ext_resource type="PackedScene" uid="uid://cdagf86861wk2" path="res://Scenes/angry_trollface.tscn" id="7_04brx"]
-[ext_resource type="PackedScene" uid="uid://b6k03dky0pgth" path="res://Scenes/josh.tscn" id="8_grt4h"]
-[ext_resource type="PackedScene" uid="uid://cqrj6sottgs8y" path="res://Scenes/normal_chad.tscn" id="9_jfxmy"]
-[ext_resource type="PackedScene" uid="uid://6d37fh5o3ohk" path="res://Scenes/beard_chad.tscn" id="10_muyr8"]
+[ext_resource type="PackedScene" path="res://Scenes/angry_trollface.tscn" id="7_04brx"]
+[ext_resource type="PackedScene" path="res://Scenes/josh.tscn" id="8_grt4h"]
+[ext_resource type="PackedScene" path="res://Scenes/normal_chad.tscn" id="9_jfxmy"]
+[ext_resource type="PackedScene" path="res://Scenes/beard_chad.tscn" id="10_muyr8"]
 [ext_resource type="PackedScene" path="res://parallax_background.tscn" id="10_w2v0d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q1tu7"]
@@ -544,10 +544,40 @@ position = Vector2(1752, 586)
 [node name="Spike13" parent="Spikes" instance=ExtResource("6_j3mm7")]
 position = Vector2(1802, 585)
 
+[node name="Spike14" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(3100, 587)
+
+[node name="Spike15" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(3148, 587)
+
+[node name="Spike16" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(3196, 587)
+
+[node name="Spike17" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(3244, 587)
+
+[node name="Spike18" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(3292, 587)
+
+[node name="Spike19" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(3340, 587)
+
+[node name="Spike20" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(3388, 587)
+
+[node name="Spike21" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(3436, 587)
+
+[node name="Spike22" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(3484, 587)
+
+[node name="Spike23" parent="Spikes" instance=ExtResource("6_j3mm7")]
+position = Vector2(3532, 587)
+
 [node name="Enemigos" type="Node" parent="."]
 
 [node name="AngryTrollface" parent="Enemigos" instance=ExtResource("7_04brx")]
-position = Vector2(2934, 316)
+position = Vector2(2714, 276)
 scale = Vector2(0.3, 0.3)
 
 [node name="Josh" parent="Enemigos" instance=ExtResource("8_grt4h")]
