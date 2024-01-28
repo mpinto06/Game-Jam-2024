@@ -24,7 +24,7 @@ shape = SubResource("RectangleShape2D_mamx8")
 [node name="PlayerDetection" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
-position = Vector2(-33, -50)
+position = Vector2(-40, -50)
 shape = SubResource("RectangleShape2D_2v1vh")
 
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
