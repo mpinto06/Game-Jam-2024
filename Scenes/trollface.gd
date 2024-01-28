@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 80
+const SPEED = 200
 var chase = false
 var player
 const JUMP_VELOCITY = -900
@@ -45,6 +45,7 @@ func _on_player_detection_body_exited(body):
 
 func _on_player_above_body_entered(body):
 	if body.name == "MainCharacter":
+		body.jump()
 		self.queue_free()
 
 

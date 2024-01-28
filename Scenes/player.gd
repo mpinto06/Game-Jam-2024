@@ -23,7 +23,7 @@ func _physics_process(delta):
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and (is_on_floor() or coyote_timer.time_left > 0.0):
-		velocity.y = JUMP_VELOCITY
+		jump()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -43,6 +43,9 @@ func _physics_process(delta):
 	var just_left_ledge = was_on_floor and is_on_floor() and velocity.y >= 0
 	if just_left_ledge:
 		coyote_timer.start()
+
+func jump():
+	velocity.y = JUMP_VELOCITY
 
 func die():
 	timer.start()
