@@ -3,6 +3,8 @@ extends Node2D
 
 func _on_play_pressed():
 	$Play.hide()	
+	$Nope.play()
+
 
 
 func _on_quit_pressed():
