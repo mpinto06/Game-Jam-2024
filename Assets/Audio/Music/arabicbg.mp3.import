@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/arabicbg.mp3-7ee2df1247d95536519b02036b77d771
 [params]
 
 loop=true
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cvihistgegmt5"]
+[gd_scene load_steps=17 format=3 uid="uid://cvihistgegmt5"]
 
 [ext_resource type="Texture2D" uid="uid://ikw4ujf8ivca" path="res://Assets/Backgrounds/Blue.png" id="1_yta4c"]
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="2_10lax"]
@@ -8,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://kg6fkhsrflkj" path="res://Scenes/puente.tscn" id="5_wonii"]
 [ext_resource type="PackedScene" uid="uid://bmxktvwhgquh5" path="res://Scenes/trollface.tscn" id="7_w2lxv"]
 [ext_resource type="PackedScene" uid="uid://cdagf86861wk2" path="res://Scenes/angry_trollface.tscn" id="8_q5gnl"]
+[ext_resource type="PackedScene" uid="uid://6tbe8pxw3dia" path="res://Scenes/cheems.tscn" id="9_yt412"]
+[ext_resource type="PackedScene" uid="uid://b6k03dky0pgth" path="res://Scenes/josh.tscn" id="10_jm56q"]
+[ext_resource type="PackedScene" uid="uid://cqrj6sottgs8y" path="res://Scenes/normal_chad.tscn" id="11_hv6ii"]
+[ext_resource type="PackedScene" uid="uid://6d37fh5o3ohk" path="res://Scenes/beard_chad.tscn" id="12_aqam6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2bum4"]
 texture = ExtResource("2_10lax")
@@ -700,4 +704,19 @@ scale = Vector2(0.3, 0.3)
 
 [node name="AngryTrollface" parent="Enemigos" instance=ExtResource("8_q5gnl")]
 position = Vector2(1800, 312)
+scale = Vector2(0.3, 0.3)
+
+[node name="Cheems" parent="Enemigos" instance=ExtResource("9_yt412")]
+position = Vector2(344, 232)
+scale = Vector2(0.3, 0.3)
+
+[node name="Josh" parent="Enemigos" instance=ExtResource("10_jm56q")]
+scale = Vector2(0.3, 0.3)
+
+[node name="NormalChad" parent="Enemigos" instance=ExtResource("11_hv6ii")]
+position = Vector2(1008, 352)
+scale = Vector2(0.3, 0.3)
+
+[node name="BeardChad" parent="Enemigos" instance=ExtResource("12_aqam6")]
+position = Vector2(584, 176)
 scale = Vector2(0.3, 0.3)
