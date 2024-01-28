@@ -8,16 +8,15 @@ var player
 var run_away = false
 
 func _physics_process(delta):
-	if run_away:
+	if run_away and position.y > 150:
 		var direction = (player.position - self.position).normalized()
-		velocity.y = -SPEED * 7
-		#velocity.x = -direction.x * SPEED + 300
-		if self.position.y > 600:
-			self.queue_free()
+		velocity.y = -SPEED * 10
+		move_and_slide()
 	else:
-		velocity.x = 0
+		run_away = false
+		return
 		
-	move_and_slide()
+	
 
 
 

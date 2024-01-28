@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_c1rvv"]
 [ext_resource type="Texture2D" uid="uid://b482sb0hkpxi" path="res://Assets/Backgrounds/Background.png" id="2_0flmk"]
-[ext_resource type="PackedScene" path="res://play.tscn" id="3_tvlxw"]
+[ext_resource type="PackedScene" uid="uid://kauedwsbajd3" path="res://play.tscn" id="3_tvlxw"]
 [ext_resource type="Texture2D" uid="uid://ch37pwoweofy2" path="res://Assets/Others/Exit_Button.png" id="4_hsfmn"]
 [ext_resource type="Texture2D" uid="uid://dqdgkrmag2v11" path="res://Assets/Others/Exit_Button_Pressed.png" id="5_utbof"]
 [ext_resource type="AudioStream" uid="uid://b8kytpi58h1uk" path="res://Assets/Audio/Music/arabicbg.mp3" id="6_q284v"]
