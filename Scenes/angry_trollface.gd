@@ -41,6 +41,7 @@ func _on_player_detection_body_exited(body):
 
 func _on_player_above_body_entered(body):
 	if body.name == "MainCharacter":
+		body.jump()
 		self.queue_free()
 
 
