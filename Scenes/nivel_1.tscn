@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cvihistgegmt5"]
+[gd_scene load_steps=18 format=3 uid="uid://cvihistgegmt5"]
 
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="2_10lax"]
 [ext_resource type="PackedScene" uid="uid://udwgo6dsj2u3" path="res://Scenes/player.tscn" id="3_6xi8w"]
@@ -625,6 +625,11 @@ texture = ExtResource("2_10lax")
 [sub_resource type="TileSet" id="TileSet_75y2v"]
 sources/0 = SubResource("TileSetAtlasSource_0ihfu")
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bfas5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_us1bl"]
+size = Vector2(74, 568)
+
 [node name="nivel_2" type="Node"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -732,3 +737,10 @@ texture = ExtResource("10_85aye")
 stream = ExtResource("11_nxwt4")
 autoplay = true
 bus = &"Music"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_bfas5")
+
+[node name="ParedFalsa" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-27, 156)
+shape = SubResource("RectangleShape2D_us1bl")
