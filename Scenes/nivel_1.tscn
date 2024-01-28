@@ -714,12 +714,12 @@ position = Vector2(1284, 440)
 [node name="Enemigos" type="Node" parent="."]
 
 [node name="Trollface" parent="Enemigos" instance=ExtResource("7_w2lxv")]
-position = Vector2(848, 264)
-scale = Vector2(0.3, 0.3)
+position = Vector2(847, 268)
+scale = Vector2(0.2, 0.2)
 
 [node name="AngryTrollface" parent="Enemigos" instance=ExtResource("8_q5gnl")]
-position = Vector2(2053.15, 297.546)
-scale = Vector2(0.3, 0.3)
+position = Vector2(2024, 232)
+scale = Vector2(0.2, 0.2)
 
 [node name="Final" parent="." instance=ExtResource("9_4wa4n")]
 position = Vector2(3472, 215)

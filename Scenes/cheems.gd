@@ -1,13 +1,14 @@
 extends CharacterBody2D
 
 
-const SPEED = 80
+const SPEED = 200
 var chase = false
 var player
 const JUMP_VELOCITY = -900
 @onready var collision_shape_2d = $CollisionShape2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@onready var cheems = $"../../cheems"
 
 
 func _physics_process(delta):
@@ -52,3 +53,7 @@ func _on_player_collision_body_entered(body):
 		if body.has_method("die"):
 			body.die()
 
+
+
+func _on_tree_exited():
+	cheems.play()

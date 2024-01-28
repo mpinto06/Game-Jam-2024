@@ -1,14 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://dnxxmq2geqg50"]
+[gd_scene load_steps=16 format=3 uid="uid://dnxxmq2geqg50"]
 
 [ext_resource type="Script" path="res://Scenes/Area2D.gd" id="1_55v8e"]
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="2_bnxiq"]
 [ext_resource type="PackedScene" uid="uid://udwgo6dsj2u3" path="res://Scenes/player.tscn" id="3_a70fp"]
-[ext_resource type="PackedScene" uid="uid://4j0a2vx6d1cd" path="res://Scenes/final.tscn" id="4_2tm6v"]
+[ext_resource type="PackedScene" path="res://Scenes/final.tscn" id="4_2tm6v"]
 [ext_resource type="PackedScene" uid="uid://c8e8q56jb700x" path="res://main.tscn" id="5_0pvek"]
 [ext_resource type="PackedScene" uid="uid://cv6auxo4eb2cj" path="res://Scenes/bmoving_block_2.tscn" id="6_dp1v5"]
 [ext_resource type="Texture2D" uid="uid://bcg7r5qgwdtsg" path="res://Assets/Backgrounds/background_nivel.png" id="6_vflcj"]
 [ext_resource type="PackedScene" uid="uid://c8hj554qvh75q" path="res://Scenes/spike.tscn" id="7_qqsk6"]
-[ext_resource type="PackedScene" uid="uid://b6k03dky0pgth" path="res://Scenes/josh.tscn" id="8_wyaxy"]
+[ext_resource type="PackedScene" uid="uid://6tbe8pxw3dia" path="res://Scenes/cheems.tscn" id="9_vbgag"]
+[ext_resource type="AudioStream" uid="uid://cda8h4fuemk44" path="res://Assets/Audio/SFX/Enemies/cheems.mp3" id="10_2djsw"]
+[ext_resource type="AudioStream" uid="uid://b8kytpi58h1uk" path="res://Assets/Audio/Music/arabicbg.mp3" id="11_73hdi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6t2ph"]
 size = Vector2(156.333, 100)
@@ -683,10 +685,6 @@ motion_mirroring = Vector2(1152, 0)
 position = Vector2(578, 326)
 texture = ExtResource("6_vflcj")
 
-[node name="Josh" parent="." instance=ExtResource("8_wyaxy")]
-position = Vector2(1231, -11)
-scale = Vector2(0.2, 0.2)
-
 [node name="Spike4" parent="." instance=ExtResource("7_qqsk6")]
 position = Vector2(2669, 397)
 
@@ -725,5 +723,20 @@ offset_right = 2645.0
 offset_bottom = -593.0
 scale = Vector2(3, 3)
 text = "Regresa al inicio xd          "
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Cheems" parent="Enemies" instance=ExtResource("9_vbgag")]
+position = Vector2(1216, -8)
+scale = Vector2(0.2, 0.2)
+
+[node name="cheems" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_2djsw")
+bus = &"SFX"
+
+[node name="Background" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_73hdi")
+autoplay = true
+bus = &"Music"
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
