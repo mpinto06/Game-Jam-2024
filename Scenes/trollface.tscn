@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://bmxktvwhgquh5"]
+
+[ext_resource type="Script" path="res://Scenes/trollface.gd" id="1_j73gt"]
+[ext_resource type="Texture2D" uid="uid://5i7isafyixu7" path="res://Assets/Characters/Enemies/Trollface/Idle.png" id="1_lubhs"]
+[ext_resource type="Texture2D" uid="uid://c551o1w0drm4s" path="res://Assets/Characters/Enemies/Trollface/Run/0.png" id="2_lkwi2"]
+[ext_resource type="Texture2D" uid="uid://oewq6uqg4l1a" path="res://Assets/Characters/Enemies/Trollface/Run/1.png" id="3_k82mo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aw10v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lubhs")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lkwi2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_k82mo")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gb7d"]
+size = Vector2(296, 425)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s5gkv"]
+radius = 1088.03
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1kbj"]
+size = Vector2(224, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spbgo"]
+size = Vector2(384, 368)
+
+[node name="Trollface" type="CharacterBody2D"]
+script = ExtResource("1_j73gt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_aw10v")
+animation = &"Run"
+autoplay = "Idle"
+frame_progress = 0.872298
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_0gb7d")
+
+[node name="PlayerDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetection"]
+shape = SubResource("CircleShape2D_s5gkv")
+
+[node name="PlayerAbove" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerAbove"]
+position = Vector2(0, -197.5)
+shape = SubResource("RectangleShape2D_t1kbj")
+
+[node name="PlayerCollision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollision"]
+position = Vector2(0, 31)
+shape = SubResource("RectangleShape2D_spbgo")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="PlayerAbove" to="." method="_on_player_death_body_entered"]
+[connection signal="body_entered" from="PlayerAbove" to="." method="_on_player_above_body_entered"]
+[connection signal="body_shape_entered" from="PlayerAbove" to="." method="_on_player_above_body_shape_entered"]
+[connection signal="body_entered" from="PlayerCollision" to="." method="_on_player_collision_body_entered"]

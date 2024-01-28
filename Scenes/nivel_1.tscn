@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cvihistgegmt5"]
+[gd_scene load_steps=12 format=3 uid="uid://cvihistgegmt5"]
 
 [ext_resource type="Texture2D" uid="uid://ikw4ujf8ivca" path="res://Assets/Backgrounds/Blue.png" id="1_yta4c"]
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="2_10lax"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cub5axh8pmcih" path="res://Scenes/moving_block.tscn" id="4_8ffc4"]
 [ext_resource type="PackedScene" uid="uid://c8hj554qvh75q" path="res://Scenes/spike.tscn" id="4_woenx"]
 [ext_resource type="PackedScene" uid="uid://kg6fkhsrflkj" path="res://Scenes/puente.tscn" id="5_wonii"]
+[ext_resource type="PackedScene" uid="uid://bmxktvwhgquh5" path="res://Scenes/trollface.tscn" id="7_w2lxv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2bum4"]
 texture = ExtResource("2_10lax")
@@ -689,3 +690,9 @@ position = Vector2(1131, 440)
 
 [node name="Puente3" parent="Puentes" instance=ExtResource("5_wonii")]
 position = Vector2(1284, 440)
+
+[node name="Enemigos" type="Node" parent="."]
+
+[node name="Trollface" parent="Enemigos" instance=ExtResource("7_w2lxv")]
+position = Vector2(848, 264)
+scale = Vector2(0.3, 0.3)
