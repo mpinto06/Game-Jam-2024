@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://bdut3u74mj7pj" path="res://Assets/Others/Play_Button_Pressed.png" id="2_cba6f"]
 
 [node name="Play" type="TextureButton"]
-offset_left = 464.0
-offset_top = 168.0
-offset_right = 714.0
-offset_bottom = 293.0
+offset_left = -124.0
+offset_top = -61.0
+offset_right = 126.0
+offset_bottom = 64.0
 texture_normal = ExtResource("1_ybs8v")
 texture_pressed = ExtResource("2_cba6f")
 texture_focused = ExtResource("1_ybs8v")
