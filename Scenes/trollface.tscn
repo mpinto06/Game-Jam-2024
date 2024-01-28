@@ -71,6 +71,7 @@ shape = SubResource("RectangleShape2D_t1kbj")
 position = Vector2(0, 39.5)
 shape = SubResource("RectangleShape2D_spbgo")
 
+[connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]

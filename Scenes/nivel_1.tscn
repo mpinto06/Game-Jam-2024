@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cvihistgegmt5"]
+[gd_scene load_steps=20 format=3 uid="uid://cvihistgegmt5"]
 
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="2_10lax"]
 [ext_resource type="PackedScene" uid="uid://udwgo6dsj2u3" path="res://Scenes/player.tscn" id="3_6xi8w"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://bcg7r5qgwdtsg" path="res://Assets/Backgrounds/background_nivel.png" id="10_85aye"]
 [ext_resource type="PackedScene" uid="uid://bmh4y2yrbf6c8" path="res://Scenes/nivel_3.tscn" id="10_cvown"]
 [ext_resource type="AudioStream" uid="uid://b8kytpi58h1uk" path="res://Assets/Audio/Music/arabicbg.mp3" id="11_nxwt4"]
+[ext_resource type="AudioStream" uid="uid://ctj8fk0bsgney" path="res://Assets/Audio/SFX/Enemies/trollface.mp3" id="12_y1rd6"]
+[ext_resource type="AudioStream" uid="uid://btohpo67ilj6b" path="res://Assets/Audio/SFX/Enemies/angry_trollface.mp3" id="13_ots3d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2bum4"]
 texture = ExtResource("2_10lax")
@@ -738,9 +740,17 @@ stream = ExtResource("11_nxwt4")
 autoplay = true
 bus = &"Music"
 
+[node name="angry_trollface" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_ots3d")
+bus = &"SFX"
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_bfas5")
 
 [node name="ParedFalsa" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-27, 156)
 shape = SubResource("RectangleShape2D_us1bl")
+
+[node name="trollface" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_y1rd6")
+bus = &"SFX"

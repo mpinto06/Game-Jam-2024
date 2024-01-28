@@ -69,6 +69,7 @@ shape = SubResource("RectangleShape2D_3w2xr")
 position = Vector2(0, 39.5)
 shape = SubResource("RectangleShape2D_ii7uh")
 
+[connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
 [connection signal="body_entered" from="PlayerDetection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="PlayerDetection" to="." method="_on_player_detection_body_exited"]
 [connection signal="body_entered" from="PlayerAbove" to="." method="_on_player_above_body_entered"]

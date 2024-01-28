@@ -8,8 +8,10 @@ const JUMP_VELOCITY = -900
 @onready var collision_shape_2d = $CollisionShape2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@onready var trollface = $"../../trollface"
 
 func _physics_process(delta):
+	trollface.play()
 	velocity.y += gravity * delta
 	if chase and animated_sprite_2d.animation != "Death":
 		animated_sprite_2d.animation = "Run"
@@ -54,3 +56,7 @@ func _on_player_collision_body_entered(body):
 	if body.name == "MainCharacter":
 		if body.has_method("die"):
 			body.die()
+
+
+func _on_tree_exited():
+	trollface.play()

@@ -1,16 +1,21 @@
-[gd_scene load_steps=17 format=3 uid="uid://bmh4y2yrbf6c8"]
+[gd_scene load_steps=22 format=3 uid="uid://bmh4y2yrbf6c8"]
 
 [ext_resource type="Texture2D" uid="uid://ck4ne0kpl8k78" path="res://Assets/Terrrain/Terrain (16x16).png" id="2_vh1qk"]
 [ext_resource type="PackedScene" uid="uid://udwgo6dsj2u3" path="res://Scenes/player.tscn" id="3_86kur"]
 [ext_resource type="PackedScene" path="res://Scenes/DownMovePlatform.tscn" id="4_7npiu"]
-[ext_resource type="PackedScene" uid="uid://4j0a2vx6d1cd" path="res://Scenes/final.tscn" id="5_fr64p"]
+[ext_resource type="PackedScene" path="res://Scenes/final.tscn" id="5_fr64p"]
 [ext_resource type="PackedScene" uid="uid://dnxxmq2geqg50" path="res://Scenes/nivel_4.tscn" id="6_1xdoi"]
 [ext_resource type="PackedScene" uid="uid://c8hj554qvh75q" path="res://Scenes/spike.tscn" id="6_j3mm7"]
-[ext_resource type="PackedScene" path="res://Scenes/angry_trollface.tscn" id="7_04brx"]
-[ext_resource type="PackedScene" path="res://Scenes/josh.tscn" id="8_grt4h"]
-[ext_resource type="PackedScene" path="res://Scenes/normal_chad.tscn" id="9_jfxmy"]
-[ext_resource type="PackedScene" path="res://Scenes/beard_chad.tscn" id="10_muyr8"]
+[ext_resource type="PackedScene" uid="uid://cdagf86861wk2" path="res://Scenes/angry_trollface.tscn" id="7_04brx"]
+[ext_resource type="PackedScene" uid="uid://b6k03dky0pgth" path="res://Scenes/josh.tscn" id="8_grt4h"]
+[ext_resource type="PackedScene" uid="uid://cqrj6sottgs8y" path="res://Scenes/normal_chad.tscn" id="9_jfxmy"]
+[ext_resource type="PackedScene" uid="uid://6d37fh5o3ohk" path="res://Scenes/beard_chad.tscn" id="10_muyr8"]
 [ext_resource type="PackedScene" path="res://parallax_background.tscn" id="10_w2v0d"]
+[ext_resource type="AudioStream" uid="uid://pow1maya726p" path="res://Assets/Audio/SFX/Enemies/normal_chad.mp3" id="12_gipd5"]
+[ext_resource type="AudioStream" uid="uid://dr4g8lyncnnel" path="res://Assets/Audio/SFX/Enemies/beardchad.mp3" id="13_6d68y"]
+[ext_resource type="AudioStream" uid="uid://ctj8fk0bsgney" path="res://Assets/Audio/SFX/Enemies/trollface.mp3" id="14_7lr0l"]
+[ext_resource type="AudioStream" uid="uid://btohpo67ilj6b" path="res://Assets/Audio/SFX/Enemies/angry_trollface.mp3" id="15_hdck5"]
+[ext_resource type="AudioStream" uid="uid://diftw476ybfpl" path="res://Assets/Audio/SFX/Enemies/josh.mp3" id="16_dxdwd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q1tu7"]
 texture = ExtResource("2_vh1qk")
@@ -648,3 +653,21 @@ physics_material_override = SubResource("PhysicsMaterial_dqcd3")
 [node name="ParedFalsa" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(-27, 156)
 shape = SubResource("RectangleShape2D_6py24")
+
+[node name="normal_chad" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_gipd5")
+
+[node name="beard_chad" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_6d68y")
+
+[node name="trollface" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_7lr0l")
+bus = &"SFX"
+
+[node name="angry_trollface" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_hdck5")
+bus = &"SFX"
+
+[node name="josh" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_dxdwd")
+bus = &"SFX"

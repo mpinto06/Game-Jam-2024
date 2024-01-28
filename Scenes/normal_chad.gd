@@ -8,8 +8,7 @@ const JUMP_VELOCITY = -900
 @onready var collision_shape_2d = $CollisionShape2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
-@onready var audio_stream_player = $AudioStreamPlayer
+@onready var normal_chad = $"../../normal_chad"
 
 func _physics_process(delta):
 	velocity.y += gravity * delta
@@ -45,7 +44,6 @@ func _on_player_detection_body_exited(body):
 func _on_player_above_body_entered(body):
 	if body.name == "MainCharacter":
 		body.jump()
-		audio_stream_player.play()
 		self.queue_free()
 
 
@@ -54,3 +52,7 @@ func _on_player_collision_body_entered(body):
 	if body.name == "MainCharacter":
 		if body.has_method("die"):
 			body.die()
+
+
+func _on_tree_exited():
+	normal_chad.play()

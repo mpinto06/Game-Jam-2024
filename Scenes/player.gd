@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var coyote_timer = $CoyoteTimer
 @onready var animated_sprite_2d_2 = $AnimatedSprite2D2
 @onready var timer = $Timer
+@onready var death = $death
 
 const SPEED = 400
 const JUMP_VELOCITY = -900
@@ -52,6 +53,7 @@ func die():
 	animated_sprite_2d.hide()
 	animated_sprite_2d_2.show()
 	get_tree().paused = true
+	death.play()
 	animated_sprite_2d_2.animation = "death"
 
 
