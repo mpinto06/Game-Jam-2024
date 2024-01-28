@@ -610,7 +610,7 @@ texture = ExtResource("2_10lax")
 [sub_resource type="TileSet" id="TileSet_75y2v"]
 sources/0 = SubResource("TileSetAtlasSource_0ihfu")
 
-[node name="nivel_1" type="Node"]
+[node name="nivel_2" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1

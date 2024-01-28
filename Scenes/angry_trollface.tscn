@@ -47,7 +47,7 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_twbwn")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.706395
+frame_progress = 0.768037
 flip_h = true
 metadata/_edit_lock_ = true
 
